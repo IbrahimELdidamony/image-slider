@@ -1,0 +1,78 @@
+*{
+    user-select: none;
+}
+img{
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    position: absolute;
+    opacity: 0.01;
+    transition: .2s;
+}
+img.active{
+    opacity: 1;
+}
+.images{
+    width: 500px;
+    height: 300px;
+    position: relative;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    align-items: center;
+}
+.next{
+    background-color: #089574;
+    color: white;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.previus{
+    background-color: #089574;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.bullets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+ul{
+    display: flex;
+    margin-right: 30px;
+    list-style: none;
+
+}
+li.active{
+    background-color: #089574;
+    color: white;
+    border: none;
+}
+
+li{
+    border: 1px solid #222;
+    margin-right: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.slide-number{
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    padding: 5px;
+    width: fit-content;
+    background-color: white;
+    z-index: 2;
+}
+.previus.disabled , .next.disabled{
+    pointer-events: none;
+    opacity: .2;
+}
